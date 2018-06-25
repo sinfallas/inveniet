@@ -1,0 +1,184 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@gmail.com>
+# Licence: GPL-2
+LC_ALL=C
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debe ser ROOT\e[00m"
+	exit 1
+fi
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+echo "$BASHPID" > /run/$(basename $0).pid
+quien=$(who | cut -d' ' -f1 | sort | uniq)
+name=$(hostname)
+nombre="revision.txt"
+sshop="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+ruta="/tmp/$name/reportes"
+salida="$ruta/$nombre"
+
+function installssh () {
+	if ! [[ -f /usr/bin/ssh ]] || [[ $(dpkg --get-selections | grep -w "ssh" | awk '{print $1}' | head -1) != ssh ]]; then
+		apt-get -q update
+		apt-get -qy install ssh unzip
+		apt-get clean
+	fi
+	if ! [[ -z $3 ]]; then
+		export HTTP_PROXY="$3"
+		export HTTPS_PROXY="$3"
+		export FTP_PROXY="$3"
+	fi
+}
+
+function revision () {
+	mkdir -p /tmp/"$name"
+	chmod 666 /tmp/"$name"
+	mkdir -p "$ruta"
+	mkdir -p /var/log
+	echo -e "## KERNEL ##""\n" > "$salida"
+	uname -r >> "$salida"
+	echo -e "\n""## osrelease ##""\n" >> "$salida"
+	cat /etc/os-release >> "$salida"
+	echo -e "\n""## CPU ##""\n" >> "$salida"
+	lscpu >> "$salida"
+	echo -e "\n""## PCI ##""\n" >> "$salida"
+	lspci >> "$salida"
+	echo -e "\n""## USB ##""\n" >> "$salida"
+	lsusb >> "$salida"
+	echo -e "\n""## MEMORIA ##""\n" >> "$salida"
+	free >> "$salida"
+	echo -e "## ESPACIO DEL HOME ##""\n" >> "$salida"
+	du -bsh /home >> "$salida"
+	du -bsh /home/$quien >> "$salida"
+	echo -e "\n""## CONEXION ##""\n" >> "$salida"
+	if ! [[ -z $2 ]]; then
+		ping -c 10 $2 >> "$salida"
+	fi
+	echo -e "\n""## PROXY ##""\n" >> "$salida"
+	echo $HTTP_PROXY >> "$salida"
+	echo $HTTPS_PROXY >> "$salida"
+	echo $FTP_PROXY >> "$salida"
+	echo -e "\n""## FSTAB ##""\n" >> "$salida"
+	cat /etc/fstab >> "$salida"
+	echo -e "\n""## IPTABLES ##""\n" >> "$salida"
+	iptables-save >> "$salida"
+	echo -e "\n""## INTERFACES ##""\n" >> "$salida"
+	ifconfig -a >> "$salida"
+	echo -e "\n""## LISTA DE PAQUETES ##""\n" >> "$salida"
+	dpkg --get-selections | grep install | awk '{print $1}' >> "$salida"
+	echo -e "\e[00;1;92mRevision finalizado...\e[00m"
+}
+
+function lynis_1 () {
+	cd /tmp/"$name"
+	if ! [[ -f /tmp/"$name"/lynis.tar.gz ]]; then
+		wget -q -O /tmp/"$name"/lynis.tar.gz - https://downloads.cisofy.com/lynis/lynis-2.6.4.tar.gz
+	fi
+	tar -xzf lynis.tar.gz
+	chown -R root:root lynis
+	cd /tmp/"$name"/lynis
+	./lynis audit system -q
+	mv -f /var/log/lynis.log "$ruta"/lynis.log
+	mv -f /var/log/lynis-report.dat "$ruta"/lynis-report.dat
+	cd ..
+	echo -e "\e[00;1;92mLynis finalizado...\e[00m"
+}
+
+function linenum_1 () {
+	cd /tmp/"$name"
+	if ! [[ -f /tmp/"$name"/master.zip ]]; then
+		wget -q -O /tmp/"$name"/master.zip - https://github.com/rebootuser/LinEnum/archive/master.zip
+	fi
+	unzip master.zip
+	cd /tmp/"$name"/LinEnum-master
+	./LinEnum.sh -r $ruta/reportelinenum -e "$ruta" -t
+	mv -f /tmp/"$name"/LinEnum-master/reportelinenum* "$ruta"/reportelinenum.log
+	cd ..
+	echo -e "\e[00;1;92mLinEnum finalizado...\e[00m"
+}
+
+function buck_security () {
+	cd /tmp/"$name"
+	if ! [[ -f /tmp/"$name"/buck.zip ]]; then
+		wget -q -O /tmp/"$name"/buck.zip - https://github.com/davewood/buck-security/archive/master.zip
+	fi
+	unzip buck.zip
+	cd /tmp/"$name"/buck-security-master
+	./buck-security --log "$ruta"/buck.log
+	cd ..
+	echo -e "\e[00;1;92mBuck-security finalizado...\e[00m"
+}
+
+function red () {
+	ssh-keygen -b 4096 -t rsa -f /home/$quien/.ssh/id_rsa -N ''
+	cat /home/"$quien"/.ssh/id_rsa.pub | ssh user@"$2" 'cat - >> ~/.ssh/authorized_keys'
+	script -q /dev/stdout -c 'scp $sshop user@"$2":/home/user/test.bin /tmp/' | tee "$ruta"/down.txt
+	script -q /dev/stdout -c 'scp $sshop /tmp/test.bin user@"$2":/home/user/temp/$name.bin' | tee "$ruta"/up.txt
+	tar -czf /tmp/"$name"-"$(date +%d/%m/%Y)".tar.gz "$ruta"
+	md5sum -b /tmp/"$name"-"$(date +%d/%m/%Y)".tar.gz > /tmp/"$name"-"$(date +%d/%m/%Y)".tar.gz.md5sum
+	scp "$sshop" /tmp/"$name".tar.gz user@"$2":/home/user/audit/
+	scp "$sshop" /tmp/"$name".tar.gz.md5sum user@"$2":/home/user/audit/
+}
+
+function finalizar () {
+	rm -f /tmp/test.bin
+	rm -rf /tmp/"$name"/*
+	rmdir /tmp/"$name"/lynis
+	rmdir /tmp/"$name"/LinEnum-master
+	rmdir /tmp/"$name"/buck-security-master
+	rmdir "$ruta"
+	rmdir /tmp/"$name"
+	cd /tmp
+	clear
+	echo -e "\e[00;1;92mFinalizado...\e[00m"
+}
+
+case "$1" in
+	cliente)
+		installssh
+		revision
+		lynis_1
+		linenum_1
+		buck_security
+		red
+		finalizar
+		;;	
+
+	servidor)
+		dd if=/dev/urandom of=/home/"$quien"/test.bin count=250000
+		mkdir /home/"$quien"/audit
+		mkdir /home/"$quien"/temp
+		mkdir /home/"$quien"/.ssh
+		mkdir /root/.ssh
+		chmod 666 /home/"$quien"/audit
+		chmod 666 /home/"$quien"/temp
+		installssh
+		sed -i 's_Port 2222_Port 22_g' /etc/ssh/sshd_config
+		sed -i 's\#AuthorizedKeysFile	%h/.ssh/authorized_keys\AuthorizedKeysFile	%h/.ssh/authorized_keys\g' /etc/ssh/sshd_config
+		sed -i 's\MaxStartups 10:30:60\MaxStartups 30:30:60\g' /etc/ssh/sshd_config
+		systemctl enable ssh
+		systemctl restart ssh
+		clear
+		echo -e "\e[00;1;92mFinalizado...\e[00m"
+		;;
+
+	local)
+		revision
+		lynis_1
+		linenum_1
+		buck_security
+		tar -czf /tmp/local.tar.gz "$ruta"
+		md5sum -b /tmp/local.tar.gz > /tmp/local.tar.gz.md5sum
+		#finalizar
+		;;
+
+	*)
+		echo "uso: $(basename $0) {cliente|servidor|local} IP PROXY"
+		echo "cliente:	indica que el script debe ejecutarse en modo cliente, necesita la opcion IP"
+		echo "servidor:	configura el sistema para recibir los resultados de los clientes"
+		echo "local:	los resultados se almacenan localmente en /tmp"
+		echo "IP:	corresponde a la ip del servidor"
+		echo "PROXY:	corresponde al ip:puerto del servidor proxy"
+		;;
+
+esac
+rm -f /run/$(basename $0).pid
+exit 0

@@ -1,0 +1,532 @@
+commit bfc476f14ddf2e10cdecd17273d0ebef3ac88edf (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 26 12:59:17 2017 -0400
+
+    *  se agrega comprobacion con dpkg
+
+commit 26eead0d911c753dfc1408ca8a910f7178fb02ea (tag: v2.1)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 20:09:00 2017 -0400
+
+    * changelog
+
+commit 8ced19600acb3d4d24711df7a1939cdc25169124
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 20:08:42 2017 -0400
+
+    * se agrega una comprobacion de descarga de archivo
+
+commit d9bad3bee77f5beebccac6c23e8f645265add081 (tag: v2.0)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 19:51:31 2017 -0400
+
+    * changelog
+
+commit 9c0acd308b54a3c9d6011450c0d0285117cbb699
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 19:51:15 2017 -0400
+
+    * ultimos cambios
+
+commit 5de365fb6eed7fb97efce7460197f542db911473
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 12:30:59 2017 -0400
+
+    * changelog
+
+commit bbc596247c08a637388bde68d1a3c329a51f4579
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 12:30:47 2017 -0400
+
+    * bugfix
+
+commit ae63b460ff45ae2cbefc18ff644879bc4f07bb5c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 12:26:17 2017 -0400
+
+    * changelog
+
+commit 851023b5bd187cb2e0cb11e5decaecde5af11ef2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 12:25:54 2017 -0400
+
+    * se cambian rutas estaticas por variables
+
+commit 5f060163dc0ba125d981917f603c7c2a2e924765
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:53:10 2017 -0400
+
+    * changelog
+
+commit 0000cff4982962e38ec9238e6eea824c55a30e4f
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:52:46 2017 -0400
+
+    * se colocan mensajes al final de cada fase importante
+
+commit 24e6961bfbfa900dc237f0d7f3892f247101d1e0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:32:36 2017 -0400
+
+    * changelog
+
+commit 822e737a724ca80721dd216cf969ff630d9ff985
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:32:21 2017 -0400
+
+    * bugfix
+
+commit d5c4fb2ab7a8badf8ee4bb2f8ccaacdbd2a64bc6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:28:29 2017 -0400
+
+    * se coloca el log de buck en el directorio correspondiente
+
+commit 6cfad6b59567eb414016590e402ba2bdf78d5172
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:14:14 2017 -0400
+
+    * changelog
+
+commit 1e809f3669beb26046b89d54ab448e99d0b731e2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue May 30 11:13:57 2017 -0400
+
+    * se mejora la ayuda
+
+commit aa42ca9837300646b60114cec14d603f27318d53
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Mar 6 23:03:25 2017 -0400
+
+    * changelog
+
+commit defa17e413860c3c4f4a9ec351013ef7787262eb
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Mar 6 23:02:31 2017 -0400
+
+    * se corrige un error en un comentario
+
+commit 7b108df3e949bf0027f5801ee79f737e44841de1 (tag: v0.1.4)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 20:25:43 2016 -0430
+
+    * changelog
+
+commit 15c0b1dd3eac73807b55cf93d23c0ce69985a302
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 20:25:21 2016 -0430
+
+    * se agrega un script para estudiarlo
+
+commit 6e43dee33fa203c20a81c3fa253da44a66eebba5
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 29 21:08:42 2016 -0430
+
+    * changelog
+
+commit 3b13f48888f4434d3e62aec1961c9b7dca5f9d8b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 29 21:08:14 2016 -0430
+
+    * logo licencia
+
+commit fe6bc91e20249e56d7af7b0392b01dcb1d78ddcf
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jan 20 19:18:12 2016 -0430
+
+    * changelog
+
+commit 7c5eb8ae7617adb3734ac8212e4128f3d0068268
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jan 20 19:17:46 2016 -0430
+
+    * bugfix
+
+commit 3c2282e817f3000a0df328cf9a58d70408efc819 (tag: v0.1.3)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 17 20:28:03 2015 -0430
+
+    * changelog
+
+commit 45981d9af095d2f721c730ef64f7e595bba195cd
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 17 20:24:08 2015 -0430
+
+    trap
+
+commit 319334b4431ca099ce46f36718026b3158d04895
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Dec 15 23:19:31 2015 -0430
+
+    * changelog
+
+commit b15912fb5773c2c8effbb1cb7addd1aebea136a1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Dec 15 23:18:55 2015 -0430
+
+    * update
+
+commit 641738a6fd4be2ceae8b7a10019edcb7a02d9fd4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 16:25:35 2015 -0430
+
+    * changelog
+
+commit 0376ee0671b9ee125f6d5bf40be6c847390c04ea
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 16:25:00 2015 -0430
+
+    * pequenas mejoras
+
+commit 384a583efca8c1ab129515942b15dcf969a280d3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:53:26 2015 -0430
+
+    * changelog
+
+commit f953473312edfa493b55c4a1f519d4df8ace669f
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:53:12 2015 -0430
+
+    * bugfix
+
+commit 901155504f63a2c36b8f5010292029984fc5e72c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:51:02 2015 -0430
+
+    * changelog
+
+commit 66b4bf8865ba4cef56567bd60f6a24e8ecb1f9b6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:50:44 2015 -0430
+
+    * se actualiza el archivo readme.md
+
+commit b9a1329aadf5d8c2ee176593e567c66468f3f4c2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:46:14 2015 -0430
+
+    * changelog
+
+commit 8b65028ece0a2ac391ba07a348cb1a19ac0cc34b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 13 15:44:45 2015 -0430
+
+    * se agrega la funcion para ejecutar buck security
+    * se pasan los valores del proxy como parametro
+    * se hace algo de limpieza
+
+commit 915f5876d2f80c4c8df2aa3170f7df6dbd96900c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Dec 12 23:45:12 2015 -0430
+
+    * changelog
+
+commit 4eed3452ec1a0aa29b47a39b3e807af472a8133a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Dec 12 23:44:44 2015 -0430
+
+    * se actualiza el archivo TODO
+
+commit 1078f4dc990df09d70657e39cef35f56898b676a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Dec 12 00:16:09 2015 -0430
+
+    * changelog
+
+commit 9b01ae6007a8fab78c7e690658191721dedb7c1d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Dec 12 00:12:49 2015 -0430
+
+    bugfix
+
+commit 6f6b2f43b184d4e9fe0acbf7bb8848f61ae38cfd
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Dec 11 21:24:11 2015 -0430
+
+    * changelog
+
+commit 6f9f83404a242455a1c72cf5db8d135f11951786
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Dec 11 21:23:54 2015 -0430
+
+    * bugfix
+
+commit d10d0b4b1e643799f4473bc2e768ecad4869ce2b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 10 22:19:32 2015 -0430
+
+    * changelog
+
+commit c68d873fc4e01459a40afacee5ebb614c2613e0d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 10 22:17:02 2015 -0430
+
+    bugfix
+
+commit 1d7b94dd055b2b4cd311f4c453e87143db0e8165
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 10 21:18:54 2015 -0430
+
+    * changelog
+
+commit 0e9f8aed9c92d8d027d6e262cedf1b74afa1382e
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 10 21:15:59 2015 -0430
+
+    optimizaciones
+
+commit 44febf6592f85dafcfb9af4d785188734d127dd5 (tag: v0.1.2)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:38:08 2015 -0430
+
+    * changelog
+
+commit 8f3369f00f70fd2fdf2ebe967b496c69c058b8f5
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:37:50 2015 -0430
+
+    * se actualiza TODO
+
+commit ef6f605d22913cf7be4441799cddd3e5311aefdc
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:13:50 2015 -0430
+
+    * changelog
+
+commit 728bd8acc08beba53d7d944dda4fb56d07abf038
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:12:44 2015 -0430
+
+    * ahora el ip del servidor se pasa como parametro al ejecutar en lugar de una variable dentro del script
+
+commit 3a1cec9ecccb29e7b3f5d6647e305eb5f2830570
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:51:18 2015 -0430
+
+    * changelog
+
+commit fa770323937da9384d5336932100d26556c9f38a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:50:53 2015 -0430
+
+    * bugfix
+
+commit 20017211c421ea74f976b2aba5dc2ace723efcfe
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:45:22 2015 -0430
+
+    * changelog
+
+commit f0d5a3ffd8bb0c6d92e9ca569211a61076615d4c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:45:00 2015 -0430
+
+    * se actualiza TODO
+
+commit 59835c4f3a4b7ec78042a0b2e9420dc4e2f5f133
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:35:36 2015 -0430
+
+    * changelog
+
+commit fd9ec06afaac7d7d0dadac861b9ae4fd620efa18
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:35:22 2015 -0430
+
+    * bugfix
+
+commit 6b4d7a4485c815680aa3e78e34cc7b816a81f30b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:11:43 2015 -0430
+
+    * changelog
+
+commit 827f7ae6928dbddc61aaf4dad5d775b7e7131067
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:11:08 2015 -0430
+
+    * se agrega la posibilidad de ejecutarlo localmente
+    * se mejora linenum
+
+commit 33f3d2b566ff29d96751f5d1776b795f7ecfb392
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:03:06 2015 -0430
+
+    * changelog
+
+commit 0eab4929646c229886104e396453f397e7ec2f6d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 21:02:23 2015 -0430
+
+    * se agrega linenum
+    * se separa el codigo en funciones
+
+commit d5a83f6f7e850e59bfb0b77f16501711b8b9f4a3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 18:04:35 2015 -0430
+
+    * changelog
+
+commit 43f7c5cea4170c5ad7867a58cefc2f8a4960ed9b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 18:01:02 2015 -0430
+
+    boinc-preinstaller
+
+commit 0ad8d356a1f28e5e535f6d76c9d0bac360bf4718
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Nov 23 21:13:44 2015 -0430
+
+    * se actualiza el archivo todo
+
+commit af40fb5164d7d440593359c95d91a3b08129b020
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 1 14:46:34 2015 -0430
+
+    * changelog
+
+commit 73576586e4df864c82b19b3ea7a44e39b958946a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 1 14:46:24 2015 -0430
+
+    * zenodo
+
+commit 76562d31d887fd943392c146021c8851c366fc77 (tag: v0.1.1)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 31 18:38:58 2015 -0430
+
+    * changelog
+
+commit d420d6ba24791e6263c5907ff2f4daee8186882e
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 31 18:38:42 2015 -0430
+
+    * se actualiza todo
+
+commit 446b8c3a2f4535ca279c7ecf1a491de1e8345b9e
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Oct 20 20:06:46 2015 -0430
+
+    bugfix
+
+commit 7e8739d76c433564c8be1d15e91ad15a949e5e68
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 19 20:08:00 2015 -0430
+
+    * changelog
+
+commit 24c891e9eae2994f713a75bdf6d7270e3c0662c1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 19 20:07:46 2015 -0430
+
+    * traduccion
+
+commit 99c3cb2b2e808e3a4f0bd96b975040824f2b58ed
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Oct 18 23:56:31 2015 -0430
+
+    optimizaciones
+
+commit 057836ce62f12028d44423cd1eb2ffe06b712a77
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Oct 13 22:21:27 2015 -0430
+
+    * changelog
+
+commit f0b103d486d06e902d2bde5b9c724c1e5e6b4a26
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Oct 13 22:21:11 2015 -0430
+
+    * travis
+
+commit 03e4781c6e89fc84db502d5db57eec5f6691b05a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Sep 24 21:25:16 2015 -0430
+
+    * changelog
+
+commit b5b494d8540f59268d56eb5d2989c523269f3c41
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Sep 24 21:23:58 2015 -0430
+
+    * se agrega una variable para el pid
+    * se actualiza el TODO
+
+commit 638145bd30e5942330fc31db25cd945a0210b4d2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 20 16:47:24 2015 -0430
+
+    * changelog
+
+commit 0e1eee2149cc648a59291d03c900fedfaab8d0d5
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 20 16:46:47 2015 -0430
+
+    * se fucionan algunos archivos de resultado en uno solo
+
+commit f0ec9f198c5dd4e0b320b268e725603942f515f4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 20 16:36:35 2015 -0430
+
+    * changelog
+
+commit 7240200257ea47d153c069e17a6828b03d053af3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 20 16:36:16 2015 -0430
+
+    * se actualiza el TODO
+
+commit 12487b0d49c058c96ae90620c81e92aa28bbebde
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Sep 19 23:07:31 2015 -0430
+
+    * changelog
+
+commit d54d1b0a110887ee2a26d3a3edd291fb930f6459
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Sep 19 23:07:07 2015 -0430
+
+    * se actualiza la lista de pendientes
+
+commit c8bfcaa1d54552ad3f4dc5269d814d2c5b27b447 (tag: v0.1)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Sep 17 12:24:21 2015 -0430
+
+    * changelog
+
+commit 607ca47b774da7fc9060077bb3718b0986763e61
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Sep 17 12:23:57 2015 -0430
+
+    * se agrega la parte del servidor
+
+commit a2d39bc29d7cf74305e56f8b6daacbe2cd7a77fd
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Sep 16 20:22:42 2015 -0430
+
+    * changelog
+
+commit 7919a2d42512965ad2758f764c25a864be55e013
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Sep 16 20:22:23 2015 -0430
+
+    * se agregan los primeros script
+
+commit 60cc09bf642344d9fc3603eb3ae400d9725870d7
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Sep 16 19:55:54 2015 -0430
+
+    * changelog
+
+commit a1dde6c2cdc0077e029823b93aee049932da5619
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Sep 16 19:55:38 2015 -0430
+
+    * primer commit
+
+commit 5f2fe31399ce072a825c3c772153b0e18094a7c4
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Sep 16 19:53:09 2015 -0430
+
+    Initial commit

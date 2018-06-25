@@ -1,0 +1,3 @@
+* agregar funcion para hacer la lista de paquetes en distribuciones no derivadas de debian
+* agregar funcion para instalar ssh en distribuciones no derivadas de debian
+* http://lamiradadelreplicante.com/2015/01/19/como-saber-que-sistema-de-inicio-usa-tu-distribucion-gnulinux/
