@@ -1,4 +1,16 @@
-commit 56c427b7eb41f1487a12e82f6b54ae77d8dde05e (HEAD -> master, origin/master, origin/HEAD)
+commit 8f29b5fae92d68b1efd51d05fac07bd418137ab2 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Sep 27 15:23:04 2020 -0400
+
+    * se agrega una busqueda de archivos sin propietario
+
+commit a9998ecb68d94a8e295dfa38203a500288bc09cd
+Author: config <Palencia>
+Date:   Mon Jul 6 22:03:34 2020 -0400
+
+    * changelog
+
+commit 56c427b7eb41f1487a12e82f6b54ae77d8dde05e
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Apr 27 16:49:36 2020 -0400
 
