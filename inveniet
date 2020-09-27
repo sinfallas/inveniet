@@ -127,6 +127,8 @@ function finalizar () {
 	rmdir "$ruta"
 	rmdir /tmp/"$name"
 	cd /tmp
+	echo "Buscando archivos sin propietario"
+	find / -xdev \( -nouser -o -nogroup \) -print
 	clear
 	echo -e "\e[00;1;92mFinalizado...\e[00m"
 }
