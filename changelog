@@ -1,4 +1,10 @@
-commit 8f29b5fae92d68b1efd51d05fac07bd418137ab2 (HEAD -> master, origin/master, origin/HEAD)
+commit eb2c02f768ff0cd7d8460e993cca3f1eb04f6701 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Sep 27 15:23:37 2020 -0400
+
+    * changelog
+
+commit 8f29b5fae92d68b1efd51d05fac07bd418137ab2
 Author: config <Palencia>
 Date:   Sun Sep 27 15:23:04 2020 -0400
 

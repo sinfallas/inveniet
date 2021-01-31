@@ -6,7 +6,7 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: Debe ser ROOT\e[00m"
 	exit 1
 fi
-trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 9 15
 echo "$BASHPID" > /run/$(basename $0).pid
 quien=$(who | cut -d' ' -f1 | sort | uniq)
 name=$(hostname)
